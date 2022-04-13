@@ -15,6 +15,10 @@ function loadChartFn(data) {
       },
     },
     data: {
+      onclick: function (data) {
+        console.log("onclick", data);
+        FileMaker.PerformScript("Get Data From Chart", JSON.stringify(data));
+      },
       labels: true,
       type: "bar",
       colors: { Boys: "#AA45FF", Girls: "#639C13" },
